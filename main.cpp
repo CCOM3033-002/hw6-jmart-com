@@ -48,7 +48,7 @@ int main()
             cout << "Selección: ";
             cin >> seleccionOp;
 
-            while (seleccionOp != 'a' || seleccionOp != 'b')
+            while (seleccionOp != 'a' && seleccionOp != 'b')
             {
                 cout << "ERROR: Entre dato valido";
 
@@ -78,7 +78,9 @@ int main()
                     cin >> altura;
                 }
 
-                cout << "El volumen del cilindro es: " << volumen(altura, radio);
+                cout << "El volumen del cilindro es: " << volumen(altura, radio) << endl;
+
+                return 0;
             }
 
             else
@@ -100,7 +102,9 @@ int main()
                     cin >> altura;
                 }
 
-                cout << "El area del cilindro es: " << area(altura, radio);
+                cout << "El area del cilindro es: " << area(altura, radio) << endl;
+
+                return 0;
             }
             
         }
@@ -130,12 +134,12 @@ int main()
 
 double volumen(double alt, double rad)
 {
-
+    return 0.0;
 }
 
 double area(double alt, double rad)
 {
-    
+    return 0.0;
 }
 
 
