@@ -111,11 +111,60 @@ int main()
 
         case 'b':
         {
-            cout << "Escoja la figura: " << endl;
+            double radio;
+
+            cout << "Escoja entre las siguientes opciones: " << endl;
             cout << "   a. Volumen" << endl;
             cout << "   b. Base" << endl;
             cout << "Selección: ";
             cin >> seleccionOp;
+
+            while (seleccionOp != 'a' && seleccionOp != 'b')
+            {
+                cout << "ERROR: Entre dato valido";
+
+                cout << "Escoja entre las siguientes opciones: " << endl;
+                cout << "   a. Volumen" << endl;
+                cout << "   b. Base" << endl;
+                cout << "Selección: ";
+                cin >> seleccionOp;
+            }
+
+            if (seleccionOp = 'a')
+            {
+                cout << "Entre el radio de la esfera: ";
+                cin >> radio;
+
+                while (radio <= 0.0)
+                {
+                    cout << "ERROR: Entre dato valido";
+
+                    cout << "Entre el radio de la esfera: ";
+                    cin >> radio;
+                }
+
+                cout << "El volumen de la esfera es: " << volumen(radio) << endl;
+
+                return 0;
+            }
+
+            else
+            {
+                cout << "Entre el radio de la esfera: ";
+                cin >> radio;
+
+                while (radio <= 0.0)
+                {
+                    cout << "ERROR: Entre dato valido";
+
+                    cout << "Entre el radio del cilindro: ";
+                    cin >> radio;
+                }
+
+                cout << "El area de la esfera es: " << area(radio) << endl;
+
+                return 0;
+            }
         }
 
         case 'c':
@@ -132,6 +181,8 @@ int main()
 }
 
 
+// Cilindro
+
 double volumen(double alt, double rad)
 {
     return 0.0;
@@ -143,3 +194,14 @@ double area(double alt, double rad)
 }
 
 
+// Esfera
+
+double volumen(double rad)
+{
+
+}
+
+double area(double rad)
+{
+
+}
