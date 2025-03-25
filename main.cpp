@@ -2,6 +2,7 @@
 */
 
 #include <iostream>
+#include <cmath>
 #include <cstdlib>
 
 using namespace std;
@@ -12,7 +13,7 @@ double volumen(double lado1, double lado2, double lado3); // Volumen de Prisma T
 
 double area(double alt, double rad); // Area de Cilindro
 double area(double rad); // Area de Esfera
-double area(double lon, double lado1, double lado2, double lado3, double base, double alt); // Area de Prisma Triangular
+double area(double lon, double anc, double alt); // Area de Prisma Rectangular
 
 int main()
 {
@@ -29,8 +30,8 @@ int main()
     cout << "Escoja la figura: " << endl;
     cout << "   a. Cilindro" << endl;
     cout << "   b. Esfera" << endl;
-    cout << "   c. Prisma Triangular" << endl;
-    cout << "Selección: ";
+    cout << "   c. Prisma Rectangular" << endl;
+    cout << "   Selección: ";
     cin >> seleccionFig;
 
     // Descicion de figura
@@ -44,7 +45,7 @@ int main()
 
             cout << "Escoja entre las siguientes opciones: " << endl;
             cout << "   a. Volumen" << endl;
-            cout << "   b. Base" << endl;
+            cout << "   b. Area" << endl;
             cout << "Selección: ";
             cin >> seleccionOp;
 
@@ -54,8 +55,8 @@ int main()
 
                 cout << "Escoja entre las siguientes opciones: " << endl;
                 cout << "   a. Volumen" << endl;
-                cout << "   b. Base" << endl;
-                cout << "Selección: ";
+                cout << "   b. Area" << endl;
+                cout << "   Selección: ";
                 cin >> seleccionOp;
             }
 
@@ -115,8 +116,8 @@ int main()
 
             cout << "Escoja entre las siguientes opciones: " << endl;
             cout << "   a. Volumen" << endl;
-            cout << "   b. Base" << endl;
-            cout << "Selección: ";
+            cout << "   b. Area" << endl;
+            cout << "   Selección: ";
             cin >> seleccionOp;
 
             while (seleccionOp != 'a' && seleccionOp != 'b')
@@ -125,8 +126,8 @@ int main()
 
                 cout << "Escoja entre las siguientes opciones: " << endl;
                 cout << "   a. Volumen" << endl;
-                cout << "   b. Base" << endl;
-                cout << "Selección: ";
+                cout << "   b. Area" << endl;
+                cout << "   Selección: ";
                 cin >> seleccionOp;
             }
 
@@ -170,14 +171,13 @@ int main()
         case 'c':
         {
             double longitud;
-            double ladoA, ladoB, ladoC;
-            double base;
-            double alt;
+            double ancho;
+            double altura;
 
             cout << "Escoja entre las siguientes opciones: " << endl;
             cout << "   a. Volumen" << endl;
-            cout << "   b. Base" << endl;
-            cout << "Selección: ";
+            cout << "   b. Area" << endl;
+            cout << "   Selección: ";
             cin >> seleccionOp;
 
             while (seleccionOp != 'a' && seleccionOp != 'b')
@@ -186,87 +186,69 @@ int main()
 
                 cout << "Escoja entre las siguientes opciones: " << endl;
                 cout << "   a. Volumen" << endl;
-                cout << "   b. Base" << endl;
-                cout << "Selección: ";
+                cout << "   b. Area" << endl;
+                cout << "   Selección: ";
                 cin >> seleccionOp;
             }
 
             if (seleccionOp = 'a')
             {
-                cout << "Entre el primer lado del prisma: ";
-                cin >> ladoA;
-
-                cout << "Entre el segundo lado del prisma: ";
-                cin >> ladoB;
-
-                cout << "Entre el tercer lado del prisma: ";
-                cin >> ladoC;
-
-                while (ladoA <= 0.0 || ladoB <= 0.0 || ladoC <= 0.0)
-                {
-                    cout << "ERROR: Entre un dato valido!";
-
-                    cout << "Entre el primer lado del prisma: ";
-                    cin >> ladoA;
-
-                    cout << "Entre el segundo lado del prisma: ";
-                    cin >> ladoB;
-
-                    cout << "Entre el tercer lado del prisma: ";
-                    cin >> ladoC;
-                }
-
-                cout << "El volumen de la esfera es: " << volumen(ladoA, ladoB, ladoC) << endl;
-                
-                return 0;
-            }
-
-            else
-            {
                 cout << "Entre la longitud del prisma: ";
                 cin >> longitud;
 
-                cout << "Entre el primer lado del prisma: ";
-                cin >> ladoA;
-
-                cout << "Entre el segundo lado del prisma: ";
-                cin >> ladoB;
-
-                cout << "Entre el tercer lado del prisma: ";
-                cin >> ladoC;
-
-                cout << "Entre la base del prisma: ";
-                cin >> base;
+                cout << "Entre el ancho del prisma: ";
+                cin >> ancho;
 
                 cout << "Entre la altura del prisma: ";
-                cin >> alt;
+                cin >> altura;
 
 
-                while (ladoA <= 0.0 || ladoB <= 0.0 || ladoC<= 0.0 || longitud <= 0.0 || base <= 0.0 || alt <= 0.0)
+                while (longitud <= 0.0 || ancho <= 0.0 || altura <= 0.0)
                 {
                     cout << "ERROR: Entre dato valido";
 
                     cout << "Entre la longitud del prisma: ";
                     cin >> longitud;
 
-                    cout << "Entre el primer lado del prisma: ";
-                    cin >> ladoA;
-
-                    cout << "Entre el segundo lado del prisma: ";
-                    cin >> ladoB;
-
-                    cout << "Entre el tercer lado del prisma: ";
-                    cin >> ladoC;
-
-                    cout << "Entre la base del prisma: ";
-                    cin >> base;
+                    cout << "Entre el ancho del prisma: ";
+                    cin >> ancho;
 
                     cout << "Entre la altura del prisma: ";
-                    cin >> alt;
+                    cin >> altura;
+
+                cout << "El volumen de la esfera es: " << volumen(longitud, ancho, altura) << endl;
+                
+                return 0;
+            }
+           
+            else
+            {
+                cout << "Entre la longitud del prisma: ";
+                cin >> longitud;
+
+                cout << "Entre el ancho del prisma: ";
+                cin >> ancho;
+
+                cout << "Entre la altura del prisma: ";
+                cin >> altura;
+
+
+                while (longitud <= 0.0 || ancho <= 0.0 || alt <= 0.0)
+                {
+                    cout << "ERROR: Entre dato valido";
+
+                    cout << "Entre la longitud del prisma: ";
+                    cin >> longitud;
+
+                    cout << "Entre el ancho del prisma: ";
+                    cin >> ancho;
+
+                    cout << "Entre la altura del prisma: ";
+                    cin >> altura;
                         
                 }
 
-                cout << "El area del prisma es: " << area(longitud, ladoA, ladoB, ladoC, base, alt) << endl;
+                cout << "El area del prisma es: " << area(longitud, ancho, altura) << endl;
 
                 return 0;
             }
@@ -277,37 +259,38 @@ int main()
 }
 
 
-// Cilindro
+
+// Funciones Cilindro
 
 double volumen(double alt, double rad)
 {
-    return 0.0;
+    return M_PI * pow(rad, 2.0) * alt;
 }
 
 double area(double alt, double rad)
 {
-    return 0.0;
+    return 2.0 * M_PI * rad * (alt + rad);
 }
 
 
-// Esfera
+// Funciones Esfera
 
 double volumen(double rad)
 {
-    return 0.0;
+    return (4.0 / 3.0) * M_PI * pow(rad, 3);
 }
 
 double area(double rad)
 {
-    return 0.0;
+    return 4.0 * M_PI * pow(rad, 2);
 }
 
-// Prisma Triangular
+// Funciones Prisma Rectangular
 
 
-double volumen(double lado1, double lado2, double lado3)
+double volumen(double lon, double anc, double alt)
 {
-    return 0.0;
+    return 0;
 }
 
 double area(double lon, double lado1, double lado2, double lado3, double base, double alt)
