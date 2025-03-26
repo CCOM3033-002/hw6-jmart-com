@@ -300,11 +300,11 @@ double area(double rad)
 
 double volumen(double lon, double anc, double alt)
 {
-    return 0;
+    return lon * anc * alt;
 }
 
-double area(double lon, double lado1, double lado2, double lado3, double base, double alt)
+double area(double lon, double anc, double alt)
 {
-    return 0.0;
+    return 2 * ((anc * lon) + (alt * lon) + (anc * alt));
 }
 
