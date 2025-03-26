@@ -295,8 +295,8 @@ double area(double rad)
     return 4.0 * M_PI * pow(rad, 2);
 }
 
-// Funciones Prisma Rectangular
 
+// Funciones Prisma Rectangular
 
 double volumen(double lon, double anc, double alt)
 {
