@@ -46,11 +46,25 @@ int main()
     cout << "   Selección: ";
     cin >> seleccionFig;
 
+    // I.V de Seleccion de Figura
+
+    while (seleccionFig != 'a' && seleccionFig != 'b' || seleccionFig != 'c')
+    {
+        cout << "ERROR: Entre dato valido";
+
+        cout << "Escoja la figura: " << endl;
+        cout << "   a. Cilindro" << endl;
+        cout << "   b. Esfera" << endl;
+        cout << "   c. Prisma Rectangular" << endl;
+        cout << "   Selección: ";
+        cin >> seleccionFig;
+    }
+
     // Descicion de figura
 
     switch (seleccionFig)
     {
-        case 'a':
+        case 'a': // Seleccion de Cilindro
         {
             double radio;
             double altura;
@@ -61,6 +75,7 @@ int main()
             cout << "Selección: ";
             cin >> seleccionOp;
 
+            // I.V de Menu de Operaciones
             while (seleccionOp != 'a' && seleccionOp != 'b')
             {
                 cout << "ERROR: Entre dato valido";
@@ -72,7 +87,7 @@ int main()
                 cin >> seleccionOp;
             }
 
-            if (seleccionOp == 'a')
+            if (seleccionOp == 'a') // Seleccion de Volumen
             {
                 cout << "Entre el radio del cilindro: ";
                 cin >> radio;
@@ -80,6 +95,7 @@ int main()
                 cout << "Entre la altura del cilindro: ";
                 cin >> altura;
 
+                // I.V de datos
                 while (radio <= 0.0 || altura <= 0.0)
                 {
                     cout << "ERROR: Entre dato valido";
@@ -96,7 +112,7 @@ int main()
                 return 0;
             }
 
-            else
+            else // Seleccion de Area
             {
                 cout << "Entre el radio del cilindro: ";
                 cin >> radio;
@@ -104,6 +120,7 @@ int main()
                 cout << "Entre la altura del cilindro: ";
                 cin >> altura;
 
+                // I.V de datos
                 while (radio <= 0.0 || altura <= 0.0)
                 {
                     cout << "ERROR: Entre dato valido";
