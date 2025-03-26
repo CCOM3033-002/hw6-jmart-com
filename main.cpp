@@ -8,6 +8,9 @@ CCOM3033-002
 
 HW6: Figuras 3D
 
+Contribuciones:
+    Varios sitos web para las formulas de las figuras
+
 */
 
 #include <iostream>
@@ -272,11 +275,15 @@ int main()
 
 // Funciones Cilindro
 
+// input: Altura y Radio
+// output: Volumen de cilindro
 double volumen(double alt, double rad)
 {
     return M_PI * pow(rad, 2.0) * alt;
 }
 
+// input: Altura y Radio
+// output: Area de Superficie de Cilindro
 double area(double alt, double rad)
 {
     return 2.0 * M_PI * rad * (alt + rad);
@@ -285,11 +292,15 @@ double area(double alt, double rad)
 
 // Funciones Esfera
 
+// input: Radio
+// output: Volumen de Esfera
 double volumen(double rad)
 {
     return (4.0 / 3.0) * M_PI * pow(rad, 3);
 }
 
+// input: Radio
+// output: Area de Superficie de Esfera
 double area(double rad)
 {
     return 4.0 * M_PI * pow(rad, 2);
@@ -298,11 +309,15 @@ double area(double rad)
 
 // Funciones Prisma Rectangular
 
+// input: Longitud, Ancho y Altura
+// output: Volumen de Prisma Rectangular
 double volumen(double lon, double anc, double alt)
 {
     return lon * anc * alt;
 }
 
+// input: Longitud, Ancho y Altura
+// output: Area de Prisma Rectangular
 double area(double lon, double anc, double alt)
 {
     return 2 * ((anc * lon) + (alt * lon) + (anc * alt));
