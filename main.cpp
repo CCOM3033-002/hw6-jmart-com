@@ -12,7 +12,7 @@ HW6: Figuras 3D
 
 #include <iostream>
 #include <cmath>
-#include <cstdlib>
+#include <iomanip>
 
 using namespace std;
 
@@ -88,7 +88,7 @@ int main()
                     cin >> altura;
                 }
 
-                cout << "El volumen del cilindro es: " << volumen(altura, radio) << endl;
+                cout << "El volumen del cilindro es: " << setprecision(2) << fixed << volumen(altura, radio) << endl;
 
                 return 0;
             }
@@ -112,7 +112,7 @@ int main()
                     cin >> altura;
                 }
 
-                cout << "El area del cilindro es: " << area(altura, radio) << endl;
+                cout << "El area del cilindro es: " << setprecision(2) << fixed << area(altura, radio) << endl;
 
                 return 0;
             }
@@ -153,7 +153,7 @@ int main()
                     cin >> radio;
                 }
 
-                cout << "El volumen de la esfera es: " << volumen(radio) << endl;
+                cout << "El volumen de la esfera es: " << setprecision(2) << fixed << volumen(radio) << endl;
 
                 return 0;
             }
@@ -171,7 +171,7 @@ int main()
                     cin >> radio;
                 }
 
-                cout << "El area de la esfera es: " << area(radio) << endl;
+                cout << "El area de la esfera es: " << setprecision(2) << fixed << area(radio) << endl;
 
                 return 0;
             }
@@ -226,7 +226,7 @@ int main()
                     cin >> altura;
                 }
 
-                cout << "El volumen de la esfera es: " << volumen(longitud, ancho, altura) << endl;
+                cout << "El volumen de la esfera es: " << setprecision(2) << fixed << volumen(longitud, ancho, altura) << endl;
                 
                 return 0;
             }
@@ -258,7 +258,7 @@ int main()
                         
                 }
 
-                cout << "El area del prisma es: " << area(longitud, ancho, altura) << endl;
+                cout << "El area del prisma es: " << setprecision(2) << fixed << area(longitud, ancho, altura) << endl;
 
                 return 0;
             }
