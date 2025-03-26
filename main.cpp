@@ -27,7 +27,7 @@ double area(double lon, double anc, double alt); // Area de Prisma Rectangular
 int main()
 {
     // Desplegar proposito
-    cout << "Este programa calcula el volumen y el área de la supercicie de tres figuras!";
+    cout << "Este programa calcula el volumen y el área de la supercicie de tres figuras!" << endl;
 
     // Declarar variable
 
