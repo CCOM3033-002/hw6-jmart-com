@@ -1,4 +1,13 @@
 /*
+
+Javier A. Martinez Ballagas / jmart-com
+
+801-24-2310
+
+CCOM3033-002
+
+HW6: Figuras 3D
+
 */
 
 #include <iostream>
@@ -60,7 +69,7 @@ int main()
                 cin >> seleccionOp;
             }
 
-            if (seleccionOp = 'a')
+            if (seleccionOp == 'a')
             {
                 cout << "Entre el radio del cilindro: ";
                 cin >> radio;
@@ -131,7 +140,7 @@ int main()
                 cin >> seleccionOp;
             }
 
-            if (seleccionOp = 'a')
+            if (seleccionOp == 'a')
             {
                 cout << "Entre el radio de la esfera: ";
                 cin >> radio;
@@ -191,7 +200,7 @@ int main()
                 cin >> seleccionOp;
             }
 
-            if (seleccionOp = 'a')
+            if (seleccionOp == 'a')
             {
                 cout << "Entre la longitud del prisma: ";
                 cin >> longitud;
@@ -215,6 +224,7 @@ int main()
 
                     cout << "Entre la altura del prisma: ";
                     cin >> altura;
+                }
 
                 cout << "El volumen de la esfera es: " << volumen(longitud, ancho, altura) << endl;
                 
@@ -233,7 +243,7 @@ int main()
                 cin >> altura;
 
 
-                while (longitud <= 0.0 || ancho <= 0.0 || alt <= 0.0)
+                while (longitud <= 0.0 || ancho <= 0.0 || altura <= 0.0)
                 {
                     cout << "ERROR: Entre dato valido";
 
