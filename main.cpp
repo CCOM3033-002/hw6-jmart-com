@@ -48,7 +48,7 @@ int main()
 
     // I.V de Seleccion de Figura
 
-    while (seleccionFig != 'a' && seleccionFig != 'b' || seleccionFig != 'c')
+    while (seleccionFig != 'a' && seleccionFig != 'b' && seleccionFig != 'c')
     {
         cout << "ERROR: Entre dato valido";
 
@@ -98,7 +98,7 @@ int main()
                 // I.V de datos
                 while (radio <= 0.0 || altura <= 0.0)
                 {
-                    cout << "ERROR: Entre dato valido";
+                    cout << "ERROR: Entre dato valido" << endl;
 
                     cout << "Entre el radio del cilindro: ";
                     cin >> radio;
@@ -123,7 +123,7 @@ int main()
                 // I.V de datos
                 while (radio <= 0.0 || altura <= 0.0)
                 {
-                    cout << "ERROR: Entre dato valido";
+                    cout << "ERROR: Entre dato valido" << endl;
 
                     cout << "Entre el radio del cilindro: ";
                     cin >> radio;
@@ -139,7 +139,7 @@ int main()
             
         }
 
-        case 'b':
+        case 'b': // Seleccion de Esfera
         {
             double radio;
 
@@ -149,9 +149,10 @@ int main()
             cout << "   Selección: ";
             cin >> seleccionOp;
 
+            // I.V de Seleccion
             while (seleccionOp != 'a' && seleccionOp != 'b')
             {
-                cout << "ERROR: Entre dato valido";
+                cout << "ERROR: Entre dato valido" << endl;
 
                 cout << "Escoja entre las siguientes opciones: " << endl;
                 cout << "   a. Volumen" << endl;
@@ -160,14 +161,15 @@ int main()
                 cin >> seleccionOp;
             }
 
-            if (seleccionOp == 'a')
+            if (seleccionOp == 'a') // Selecion de Volumen
             {
                 cout << "Entre el radio de la esfera: ";
                 cin >> radio;
 
+                // I.V de dato
                 while (radio <= 0.0)
                 {
-                    cout << "ERROR: Entre dato valido";
+                    cout << "ERROR: Entre dato valido" << endl;
 
                     cout << "Entre el radio de la esfera: ";
                     cin >> radio;
@@ -178,14 +180,15 @@ int main()
                 return 0;
             }
 
-            else
+            else // Seleccion de Area
             {
                 cout << "Entre el radio de la esfera: ";
                 cin >> radio;
 
+                // I.V de dato
                 while (radio <= 0.0)
                 {
-                    cout << "ERROR: Entre dato valido";
+                    cout << "ERROR: Entre dato valido" << endl;
 
                     cout << "Entre el radio del cilindro: ";
                     cin >> radio;
@@ -197,7 +200,7 @@ int main()
             }
         }
 
-        case 'c':
+        case 'c': // Seleccion Prisma Rectangular
         {
             double longitud;
             double ancho;
@@ -209,6 +212,7 @@ int main()
             cout << "   Selección: ";
             cin >> seleccionOp;
 
+            // I.V de seleccion
             while (seleccionOp != 'a' && seleccionOp != 'b')
             {
                 cout << "ERROR: Entre dato valido";
@@ -220,7 +224,7 @@ int main()
                 cin >> seleccionOp;
             }
 
-            if (seleccionOp == 'a')
+            if (seleccionOp == 'a') // Seleccion de Volumen
             {
                 cout << "Entre la longitud del prisma: ";
                 cin >> longitud;
@@ -232,9 +236,10 @@ int main()
                 cin >> altura;
 
 
+                // I.V de datos
                 while (longitud <= 0.0 || ancho <= 0.0 || altura <= 0.0)
                 {
-                    cout << "ERROR: Entre dato valido";
+                    cout << "ERROR: Entre dato valido" << endl;
 
                     cout << "Entre la longitud del prisma: ";
                     cin >> longitud;
@@ -251,7 +256,7 @@ int main()
                 return 0;
             }
            
-            else
+            else // Seleccion Area
             {
                 cout << "Entre la longitud del prisma: ";
                 cin >> longitud;
@@ -262,10 +267,10 @@ int main()
                 cout << "Entre la altura del prisma: ";
                 cin >> altura;
 
-
+                // I.V  de datos
                 while (longitud <= 0.0 || ancho <= 0.0 || altura <= 0.0)
                 {
-                    cout << "ERROR: Entre dato valido";
+                    cout << "ERROR: Entre dato valido" << endl;
 
                     cout << "Entre la longitud del prisma: ";
                     cin >> longitud;
